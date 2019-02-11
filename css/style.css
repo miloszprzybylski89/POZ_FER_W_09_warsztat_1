@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,400,400i,500,500i,700,700i,900,900i');
+
 * {
   padding: 0;
   margin: 0;
-  font-family: arial, verdana, sans-serif;
+  font-family: 'Raleway', arial, verdana, sans-serif;
   box-sizing: border-box;
 }
 
 .container {
-  width: 1200px;
+  width: 1050px;
   display: flex;
-  justify-content: center;
-  margin: 0 72px;
+  justify-content: space-between;
+  margin: auto;
 }
 
 header {
@@ -25,6 +27,21 @@ header {
   margin: 0;
 }
 
+.prices {
+  display: flex;
+  flex-direction: column;
+  background-color: #F0F0F0;
+}
+
+.pricePlans {
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -32,7 +49,7 @@ header {
 }
 
 nav {
-  width: 400px;
+  width: 330px;
   display: flex;
   justify-content: space-between;
 }
@@ -52,21 +69,78 @@ nav {
   font-weight: 1000;
 }
 
+.aboutArticle::before {
+  content: "<";
+  font-size: 90px;
+  font-weight: 400;
+  color: #00C49F;
+  margin-right: 24px;
+}
+
+.aboutArticle::after {
+  content: ">";
+  font-size: 90px;
+  font-weight: 400;
+  color: #00C49F;
+  margin-left: 100px;
+}
+
 .aboutArticle {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 100%;
   background-image: image('../images/background.png');
   background-repeat: repeat-x;
 }
 
+.articleTitle {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 40px;
+  letter-spacing: 0.001em;
+}
+
+.articleTitle .differentColor {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.descriptionPanel {
+  width: 550px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  text-align: center;
+  margin: 36px 0;
+}
+
 .articleImage {
+  content: "";
   background-image: url('../images/black_chair.png');
-  min-width: 300px;
+  width: 520px;
+  height: 420px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 1;
+  margin-top: 60px;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: #00C49F;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-size: 24px;
 }
 
 .boxRotated {
@@ -81,8 +155,10 @@ nav {
 }
 
 .slideBar {
+  height: 500px;
   display: flex;
   justify-content: space-around;
+  background-image: url('../images/background.png');
 }
 
 .navbar {
@@ -114,7 +190,6 @@ nav {
   font-family: inherit;
   margin: 0;
   text-transform: uppercase;
-
 }
 
 .dropdown-content {
@@ -133,6 +208,7 @@ nav {
   text-decoration: none;
   display: block;
   text-align: left;
+  padding-bottom: 6px;
 }
 
 .dropdown-content a:hover {
@@ -141,4 +217,117 @@ nav {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.articles {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.threeBoxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.articleBox1 {
+  min-width: 330px;
+  max-width: 330px;
+  height: 230px;
+  background-image: url('../images/box1_img.jpg');
+}
+
+.articleBox2 {
+  min-width: 330px;
+  max-width: 330px;
+  height: 230px;;
+  background-image: url('../images/box2_img.jpg');
+  background-repeat: no-repeat;
+}
+
+.articleName {
+    padding: 15px;
+    margin-top: 150px;
+    border-bottom: 6px solid #00C49F;
+    padding-bottom: 2px;
+    width: fit-content;
+}
+
+.articleNameBackground {
+    background-color: rgba(255,255,255,0.5);
+    padding-bottom: 18px;
+}
+
+.articleDescription {
+  min-width: 325px;
+  max-width: 325px;
+  height: 300px;
+}
+
+.textarea {
+  height: 250px;
+  width: 340px;
+  padding: 28px 20px;
+  margin: 0 -10px;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+
+.smallTitle {
+  border-bottom: 6px solid #00C49F;
+  padding-bottom: 2px;
+  width: fit-content;
+  padding-right: 32px;
+}
+
+.smallText {
+  letter-spacing: -0.5px;
+  line-height: 20px;
+  margin-top: 18px;
+}
+
+.sectionTitle {
+  margin: 36px 0;
+  text-transform: uppercase;
+  width: 320px;
+  border-bottom: solid 6px #00C49F;
+  padding-bottom: 5px;
+}
+
+.pricePlan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 325px;
+  max-width: 325px;
+  border: 1px solid #c0c0c0;
+  margin: 40px 0
+}
+
+.articlePrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border: 1px solid #c0c0c0;
+}
+
+.pricePlanName {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+    font-stretch: ultra-condensed;
+    margin: 30px 0px;
+    color: #00C49F;
+}
+
+.price {
+  font-size: 45px;
+}
+
+sup {
+  font-size: 0.4em;
 }
